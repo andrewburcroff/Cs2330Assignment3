@@ -1,5 +1,5 @@
 # Project name
-SOURCE          = hworld.c
+SOURCE          = program.c
 ADDITIONAL      =
 # Get base name so we can create .elf file
 NAME            = $(basename $(SOURCE))
@@ -28,9 +28,6 @@ flash: $(NAME).elf
 # Erase board
 erase:
 	mspdebug rf2500 erase
-
-stuff: hworld.c
-	echo "I found hworld.c!" && cat hworld.c
 
 # Clean up temporary files
 clean:
